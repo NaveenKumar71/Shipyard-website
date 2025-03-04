@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tamilnadu Shipyard Limited</title>
+    <a href="login.html" class="login-btn">Login / Sign Up</a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #003366;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #003366;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .btn-submit {
+            background: #003366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #0055a4;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Navbar Styles */
+        nav {
+            background-color: #002244;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002244;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h2 {
+            color: white;
+        }
+        .login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: linear-gradient(135deg, #00aaff, #0055a4); /* Matches header theme */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 85, 164, 0.3);
+    border: 2px solid white; /* Adds a clean border */
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #0055a4, #00aaff); /* Reverse gradient effect */
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="landingimages/logo.png" alt="Logo" class="logo">
+            <h1>Tamilnadu Shipyard Limited</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="team.html">Teams</a></li>
+                <li><a href="vendor.html">Services & Products</a></li>
+                <li><a href="tender.html">Tender</a></li>
+                <li><a href="vigilance.html">Vigilance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email ID:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="query">Your Query:</label>
+                <textarea id="query" name="query" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+    
+    <section id="contact">
+        <footer>
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Tamilnadu Shipyard Limited</p>
+            <p><strong>Phone:</strong> +91 98765 44343</p>
+            <p><strong>Email:</strong> tamilnaduship@gmail.com</p>
+        </footer>
+    </section>
+</body>
+</html>

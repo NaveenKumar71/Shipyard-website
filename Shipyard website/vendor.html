@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Vendor Directory</title>
+    <a href="login.html" class="login-btn">Login / Sign Up</a>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: #002244;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        footer {
+            background-color: #002244;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h2 {
+            color: white;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-section {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        #vendor-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .vendor-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .vendor-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .vendor-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .vendor-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .vendor-card button {
+            background: #0044cc;
+            color: #fff;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .vendor-card button:hover {
+            background: #0033aa;
+        }
+
+        #contact-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact-form h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        #contact-form input, #contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #f9f9f9;
+        }
+
+        #contact-form button {
+            width: 100%;
+            background: #0088ff;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact-form button:hover {
+            background: #005f99;
+        }
+
+        .filter-section select,
+        .filter-section button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .filter-section button {
+            background: #0044cc;
+            color: white;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .filter-section button:hover {
+            background: #0033aa;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #vendor-list {
+                justify-content: center;
+            }
+
+            .vendor-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            header {
+                padding: 40px 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+        .login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: linear-gradient(135deg, #00aaff, #0055a4); /* Matches header theme */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 85, 164, 0.3);
+    border: 2px solid white; /* Adds a clean border */
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #0055a4, #00aaff); /* Reverse gradient effect */
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <img src="landingimages/logo.png" alt="Logo" class="logo">
+        <h1>Shipyard Vendor Directory</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="team.html">Teams</a></li>
+            <li><a href="vendor.html">Services & products</a></li>
+            <li><a href="tendor.html">Tender</a></li>
+            <li><a href="vigilance.html">Vigilance</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main>
+    <section class="filter-section">
+        <h2>Filter Vendors</h2>
+        <form id="filterForm">
+            <label for="location">Location:</label>
+            <select name="location" id="location">
+                <option value="all">All Locations</option>
+                <option value="California">California</option>
+                <option value="Florida">Florida</option>
+                <option value="Washington">Washington</option>
+                <option value="New York">New York</option>
+            </select>
+
+            <label for="rating">Rating:</label>
+            <select name="rating" id="rating">
+                <option value="all">All Ratings</option>
+                <option value="4">4 Stars & Up</option>
+                <option value="4.5">4.5 Stars & Up</option>
+                <option value="5">5 Stars</option>
+            </select>
+
+            <button type="button" onclick="filterVendors()">Apply Filters</button>
+        </form>
+    </section>
+
+    <section id="vendor-list">
+        <div class="vendor-card" data-location="California" data-rating="4.5">
+            <h3>Oceanic Shipyards</h3>
+            <p>Location: California</p>
+            <p>Rating: 4.5 ★</p>
+            <button onclick="contactVendor('Oceanic Shipyards')">Contact Vendor</button>
+        </div>
+        <div class="vendor-card" data-location="Florida" data-rating="4.7">
+            <h3>Atlantic Marine</h3>
+            <p>Location: Florida</p>
+            <p>Rating: 4.7 ★</p>
+            <button onclick="contactVendor('Atlantic Marine')">Contact Vendor</button>
+        </div>
+        <div class="vendor-card" data-location="Washington" data-rating="4.2">
+            <h3>Pacific Shipbuilders</h3>
+            <p>Location: Washington</p>
+            <p>Rating: 4.2 ★</p>
+            <button onclick="contactVendor('Pacific Shipbuilders')">Contact Vendor</button>
+        </div>
+        <div class="vendor-card" data-location="New York" data-rating="4.8">
+            <h3>Northern Ship Works</h3>
+            <p>Location: New York</p>
+            <p>Rating: 4.8 ★</p>
+            <button onclick="contactVendor('Northern Ship Works')">Contact Vendor</button>
+        </div>
+    </section>
+
+    <section id="contact-form">
+        <h2>Contact Vendor</h2>
+        <form id="contactForm">
+            <input type="hidden" name="vendorName" id="vendorName" value="">
+            <label for="name">Your Name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea name="message" id="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</section>
+</main>
+
+<section id="contact">
+    <footer>
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Tamilnadu Shipyard Limited</p>
+        <p><strong>Phone:</strong> +91 98765 44343</p>
+        <p><strong>Email:</strong> tamilnaduship@gmail.com</p>
+    </footer>
+
+<script>
+    function filterVendors() {
+        const location = document.getElementById('location').value;
+        const rating = document.getElementById('rating').value;
+        const vendors = document.querySelectorAll('.vendor-card');
+
+        vendors.forEach(vendor => {
+            const vendorLocation = vendor.getAttribute('data-location');
+            const vendorRating = parseFloat(vendor.getAttribute('data-rating'));
+
+            // Apply location filter
+            const locationMatch = location === 'all' || location === vendorLocation;
+
+            // Apply rating filter
+            const ratingMatch = rating === 'all' || vendorRating >= parseFloat(rating);
+
+            if (locationMatch && ratingMatch) {
+                vendor.style.display = 'block';
+            } else {
+                vendor.style.display = 'none';
+            }
+        });
+    }
+
+    function contactVendor(vendorName) {
+        document.getElementById('vendorName').value = vendorName;
+        document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Thank you for contacting ' + document.getElementById('vendorName').value + '!');
+        document.getElementById('contactForm').reset();
+    });
+</script>
+
+</body>
+</html> 

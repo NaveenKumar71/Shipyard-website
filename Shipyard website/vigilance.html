@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Vigilance</title>
+    <a href="login.html" class="login-btn">Login / Sign Up</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url('background.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            color: black;
+        }
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: #002244;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002244;
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h2 {
+            color: white;
+        }
+
+        /* Other existing styles */
+        .header {
+            width: 100%;
+            padding: 20px;
+            background: #3a7bd5;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+            border-bottom: 3px solid #2a5ca8;
+        }
+        .container {
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+            height: calc(100vh - 80px);
+            gap: 20px;
+            padding: 20px;
+        }
+        .sidebar {
+            width: 250px;
+            background: #3a7bd5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar ul {
+            list-style: none;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            color: white;
+        }
+        .sidebar ul li:hover {
+            background: #2a5ca8;
+            color: white;
+            border-radius: 5px;
+        }
+        .content {
+            flex-grow: 1;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            overflow-y: auto;
+        }
+        .content h2 {
+            color: #2a5ca8;
+        }
+        .doc-link {
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+            padding: 10px;
+            margin: 10px 0;
+            color: #2a5ca8;
+            text-decoration: none;
+        }
+        .doc-link:hover {
+            background: #f0f0f0;
+            border-radius: 5px;
+            color: #2a5ca8;
+        }
+        .doc-link i {
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            margin-top: 30px;
+            width: 100%;
+            height: calc(100vh - 80px);
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .image-container img {
+            width: 48%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+        .login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: linear-gradient(135deg, #00aaff, #0055a4); /* Matches header theme */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 85, 164, 0.3);
+    border: 2px solid white; /* Adds a clean border */
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #0055a4, #00aaff); /* Reverse gradient effect */
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    <!-- New Header Section -->
+    <header>
+        <div class="header-content">
+            <img src="landingimages/logo.png" alt="Logo" class="logo">
+            <h1>Tamilnadu Shipyard Limited</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="team.html">Teams</a></li>
+                <li><a href="#services">Services & products</a></li>
+                <li><a href="#products">Tender</a></li>
+                <li><a href="vigilance.html">Vigilance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Existing Content -->
+    <div class="header">Shipyard Vigilance</div>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li onclick="showContent('safety')">Safety Reports</li>
+                <li onclick="showContent('compliance')">Compliance Documents</li>
+                <li onclick="showContent('logs')">Inspection Logs</li>
+                <li onclick="showContent('alerts')">Security Alerts</li>
+            </ul>
+        </div>
+
+        <div class="content" id="content">
+            <div class="image-container">
+                <img src="vegilance/bg1.jpg" alt="Vigilance Image 1">
+                <img src="vegilance/bg2.jpg" alt="Vigilance Image 2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Tamilnadu Shipyard Limited</p>
+        <p><strong>Phone:</strong> +91 98765 44343</p>
+        <p><strong>Email:</strong> tamilnaduship@gmail.com</p>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            let content = document.getElementById('content');
+            let data = {
+                safety: `
+                    <h2>Safety Reports</h2>
+                    <a href='Jan2025.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Safety Report 1</a>
+                    <a href='Feb.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Safety Report 2</a>
+                    <a href='safety-report3.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Safety Report 3</a>
+                `,
+                compliance: `
+                    <h2>Compliance Documents</h2>
+                    <a href='Jan2025.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Compliance Document 1</a>
+                    <a href='Feb.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Compliance Document 2</a>
+                    <a href='Mar.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Compliance Document 3</a>
+                `,
+                logs: `
+                    <h2>Inspection Logs</h2>
+                    <a href='Jan2025.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Inspection Log 1</a>
+                    <a href='Feb.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Inspection Log 2</a>
+                    <a href='Mar.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Inspection Log 3</a>
+                `,
+                alerts: `
+                    <h2>Security Alerts</h2>
+                    <a href='Jan2025.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Security Alert 1</a>
+                    <a href='Feb.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Security Alert 2</a>
+                    <a href='Mar.pdf' class='doc-link' download><i class='fas fa-file-pdf'></i> Download Security Alert 3</a>
+                `,
+            };
+            content.innerHTML = data[section];
+        }
+    </script>
+</body>
+</html>
+

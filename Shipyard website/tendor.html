@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipyard Tenders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        nav {
+            background-color: #002244;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00aaff;
+        }
+
+        footer {
+            background-color: #002244;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer h2 {
+            color: white;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        main {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .filter-section {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        #tender-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .tender-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tender-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .tender-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .tender-card p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .tender-card button {
+            background: #0044cc;
+            color: #fff;
+            padding: 12px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tender-card button:hover {
+            background: #0033aa;
+        }
+
+        #submit-tender {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #submit-tender h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        #submit-tender input, #submit-tender textarea, #submit-tender select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #f9f9f9;
+        }
+
+        #submit-tender button {
+            width: 100%;
+            background: #0088ff;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #submit-tender button:hover {
+            background: #005f99;
+        }
+
+        footer {
+            text-align: center;
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #tender-list {
+                justify-content: center;
+            }
+
+            .tender-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            header {
+                padding: 40px 0;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="landingimages/logo.png" alt="Logo" class="logo">
+            <h1>Shipyard Vendor Directory</h1>
+        </div>
+        <nav>
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="team.html">Teams</a></li>
+            <li><a href="vendor.html">Services & Products</a></li>
+            <li><a href="tendor.html">Tender</a></li>
+            <li><a href="vigilance.html">Vigilance</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
+
+<main>
+    <section class="filter-section">
+        <h2>Filter Tenders</h2>
+        <form id="filterForm">
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="all">All Locations</option>
+                <option value="California">California</option>
+                <option value="Florida">Florida</option>
+                <option value="Washington">Washington</option>
+                <option value="New York">New York</option>
+            </select>
+
+            <label for="budget">Budget:</label>
+            <select id="budget">
+                <option value="all">Any Budget</option>
+                <option value="100000">Below $100,000</option>
+                <option value="500000">$100,000 - $500,000</option>
+                <option value="1000000">Above $500,000</option>
+            </select>
+
+            <button type="button" onclick="filterTenders()">Apply Filters</button>
+        </form>
+    </section>
+
+    <section id="tender-list">
+        <div class="tender-card" data-location="California" data-budget="500000">
+            <h3>Ship Repair Project</h3>
+            <p>Location: California</p>
+            <p>Budget: $450,000</p>
+            <button>View Details</button>
+        </div>
+        <div class="tender-card" data-location="Florida" data-budget="1000000">
+            <h3>New Dock Construction</h3>
+            <p>Location: Florida</p>
+            <p>Budget: $1,200,000</p>
+            <button>View Details</button>
+        </div>
+        <div class="tender-card" data-location="Washington" data-budget="100000">
+            <h3>Safety System Upgrade</h3>
+            <p>Location: Washington</p>
+            <p>Budget: $80,000</p>
+            <button>View Details</button>
+        </div>
+    </section>
+
+    <section id="submit-tender">
+        <h2>Submit a New Tender</h2>
+        <form>
+            <input type="text" placeholder="Tender Title" required>
+            <input type="text" placeholder="Location" required>
+            <input type="number" placeholder="Budget ($)" required>
+            <textarea placeholder="Description" rows="4" required></textarea>
+            <button type="submit">Submit Tender</button>
+        </form>
+    </section>
+</main>
+
+<section id="contact">
+    <footer>
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Tamilnadu Shipyard Limited</p>
+        <p><strong>Phone:</strong> +91 98765 44343</p>
+        <p><strong>Email:</strong> tamilnaduship@gmail.com</p>
+    </footer>
+
+<script>
+    function filterTenders() {
+        const location = document.getElementById('location').value;
+        const budget = document.getElementById('budget').value;
+        const tenders = document.querySelectorAll('.tender-card');
+
+        tenders.forEach(tender => {
+            const tenderLocation = tender.getAttribute('data-location');
+            const tenderBudget = parseInt(tender.getAttribute('data-budget'));
+
+            const locationMatch = location === 'all' || location === tenderLocation;
+            const budgetMatch = budget === 'all' || tenderBudget <= parseInt(budget);
+
+            tender.style.display = locationMatch && budgetMatch ? 'block' : 'none';
+        });
+    }
+</script>
+
+</body>
+</html>

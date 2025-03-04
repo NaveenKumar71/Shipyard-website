@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.w3schools.com/w3images/ocean.jpg') no-repeat center center fixed; /* Ocean background image */
+            background-size: cover; /* Ensure the image covers the entire page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .signup-box {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            width: 500px;  /* Increased width */
+            height: 500px; /* Increased height for larger square */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  /* Center content horizontally */
+            text-align: center; /* Center text */
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+            opacity: 0.9; /* Reduced opacity */
+        }
+
+        .signup-box:hover {
+            transform: translateY(-10px); /* Slightly lift the box */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow effect on hover */
+            opacity: 1; /* Full opacity on hover */
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #3498db; /* Blue color for header */
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            color: #3498db; /* Blue color for labels */
+            margin-bottom: 8px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #3498db; /* Blue border for input fields */
+            border-radius: 8px;
+            outline: none;
+            background: #f0faff; /* Light blue background for inputs */
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            background: #fff; /* White background on focus */
+            border-color: #2980b9; /* Darker blue border on focus */
+        }
+
+        .input-group input:hover {
+            background: #e1effa; /* Light blue background on hover */
+            border-color: #2980b9; /* Darker blue border on hover */
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db; /* Blue button background */
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;  /* Add margin to separate from input fields */
+        }
+
+        .submit-btn:hover {
+            background-color: #2980b9; /* Darker blue when hovering over button */
+        }
+
+        .submit-btn:active {
+            background-color: #1c598a; /* Even darker blue when button is clicked */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-box">
+            <h1>Sign Up</h1>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

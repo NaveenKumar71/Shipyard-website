@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamilnadu Shipyard Limited</title>
+    <a href="login.html" class="login-btn">Login / Sign Up</a>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        
+/* Background Styling */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background: #ffffff; /* Uniform dark background */
+}
+
+/* Main Container */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: rgb(255, 255, 255); /* Slight transparency for readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+/* Headings */
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.team-section {
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #000000;
+    display: inline-block;
+    padding-bottom: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header {
+            background: linear-gradient(135deg, #003366, #0055a4);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+.header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            max-height: 80px;
+            margin-right: 15px;
+            border-radius: 50%; /* Makes the logo circular */
+            object-fit: cover; /* Ensures it maintains proportions */
+        }
+        nav {
+            background-color: #002244;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: rgb(255, 252, 252);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00aaff;
+        }
+/* Responsive Team Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    justify-items: center;
+    margin-top: 10px;
+}
+
+/* Team Member Card */
+.team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    max-width: 200px;
+}
+
+/* Hover Effects */
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+/* Team Member Image */
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000000;
+}
+
+/* Team Member Text */
+.team-member h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.team-member p {
+    font-size: 12px;
+    color: #000000;
+    padding: 5px;
+    line-height: 1.4;
+}
+footer {
+    color: rgb(255, 255, 255); /* Change this to your preferred color */
+    background-color: #002244;
+    padding: 20px;
+    text-align: center;
+}
+footer h2 {
+    color: white;
+}
+.login-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: linear-gradient(135deg, #00aaff, #0055a4); /* Matches header theme */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 85, 164, 0.3);
+    border: 2px solid white; /* Adds a clean border */
+}
+
+.login-btn:hover {
+    background: linear-gradient(135deg, #0055a4, #00aaff); /* Reverse gradient effect */
+    transform: scale(1.05);
+}
+
+
+
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 20px; }
+    .team-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .team-member { max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+    .team-grid { grid-template-columns: 1fr 1fr; } /* Two per row */
+}
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="landingimages/logo.png" alt="Logo" class="logo">
+            <h1>Tamilnadu Shipyard Limited</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="team.html">Teams</a></li>
+                <li><a href="vendor.html">Services & products</a></li>
+                <li><a href="tendor.html">Tender</a></li>
+                <li><a href="#facilities">Vigilance</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Meet Our Shipyard Team</h1>
+
+        <section class="team-section">
+            <h2>President</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/president.jpg" alt="President">
+                    <h3>John Doe</h3>
+                    <p>With over 25 years in the shipbuilding industry, John has led major projects ensuring top-quality vessels. His leadership drives innovation and excellence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Head Officers</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/head1" alt="Head Officer">
+                    <h3>Alice Smith</h3>
+                    <p>Expert in ship design and engineering, Alice has overseen the development of state-of-the-art marine structures for over 18 years.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/head2" alt="Head Officer">
+                    <h3>Robert Brown</h3>
+                    <p>Robert specializes in shipyard operations, optimizing logistics and supply chain management to enhance efficiency.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/head3" alt="Head Officer">
+                    <h3>Emily White</h3>
+                    <p>Emily ensures smooth project execution, managing teams with precision to meet tight deadlines and high standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Managers</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="images/istockphoto-177383755-2048x2048.jpg" alt="Manager">
+                    <h3>David Johnson</h3>
+                    <p>David is a quality assurance expert, ensuring every vessel meets the strictest safety and performance regulations.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/istockphoto-2153383214-612x612.jpg" alt="Manager">
+                    <h3>Sarah Adams</h3>
+                    <p>Sarah leads production management, coordinating teams to streamline assembly and construction processes.</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/istockphoto-933662254-612x612.jpg" alt="Manager">
+                    <h3>Michael Lee</h3>
+                    <p>With expertise in finance, Michael manages budgets, ensuring cost-effective solutions without compromising quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Supervisors</h2>
+            <div class="team-grid">
+                <div class="team-member"><img src="images/gettyimages-1287671418-612x612.jpg" alt="Supervisor"><h3>Lisa Brown</h3><p>Specializes in maintenance and repairs for high-performance vessels.</p></div>
+                <div class="team-member"><img src="images/gettyimages-1287672541-612x612.jpg" alt="Supervisor"><h3>James Clark</h3><p>Ensures compliance with maritime safety regulations and protocols.</p></div>
+                <div class="team-member"><img src="images/gettyimages-1323164743-612x612.jpg" alt="Supervisor"><h3>Emma Watson</h3><p>Leads on-site shipyard training and team development programs.</p></div>
+                <div class="team-member"><img src="images/gettyimages-1387194149-612x612.jpg" alt="Supervisor"><h3>William Scott</h3><p>Expert in structural welding and fabrication processes.</p></div>
+                <div class="team-member"><img src="images/gettyimages-1394044977-612x612.jpg" alt="Supervisor"><h3>Jessica Turner</h3><p>Manages assembly line efficiency to ensure timely production.</p></div>
+                <div class="team-member"><img src="images/gettyimages-1411057025-612x612.jpg" alt="Supervisor"><h3>Daniel Wilson</h3><p>Specialist in mechanical systems and propulsion technology.</p></div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>Lead Engineers</h2>
+            <div class="team-grid">
+                <div class="team-member"><img src="images/gettyimages-1425581410-612x612.jpg" alt="Lead Engineer"><h3>Chris Evans</h3><p>Innovates ship propulsion systems for maximum efficiency.</p></div>
+                <div class="team-member"><img src="images/gettyimages-2164362933-612x612.jpg" alt="Lead Engineer"><h3>Olivia Martinez</h3><p>Develops advanced materials for stronger, lighter ships.</p></div>
+                <div class="team-member"><img src="images/gettyimages-2164363240-612x612.jpg" alt="Lead Engineer"><h3>Jack Robinson</h3><p>Designs cutting-edge navigation and safety systems.</p></div>
+                <div class="team-member"><img src="images/gettyimages-2164363456-612x612.jpg" alt="Lead Engineer"><h3>Isabella Wright</h3><p>Optimizes fuel efficiency with eco-friendly solutions.</p></div>
+                <div class="team-member"><img src="images/gettyimages-501572846-612x612.jpg" alt="Lead Engineer"><h3>Ethan Thomas</h3><p>Specializes in ship automation, integrating smart technology for enhanced safety and efficiency.</p></div>
+                <div class="team-member"><img src="images/gettyimages-692753339-612x612.jpg" alt="Lead Engineer"><h3>Ava Gonzalez</h3><p>Expert in marine electrical systems, ensuring reliable and efficient power distribution on vessels.</p></div>
+                <div class="team-member"><img src="images/gettyimages-842366180-612x612.jpg" alt="Lead Engineer"><h3>Benjamin Harris</h3><p>Focuses on hull optimization, designing structures that improve speed, durability, and fuel efficiency.</p></div>
+                <div class="team-member"><img src="images/gettyimages-2164363321-612x612.jpg" alt="Lead Engineer"><h3>Charlotte Nelson</h3><p>Specialist in corrosion prevention, developing coatings and materials to extend vessel lifespan.</p>
+                </div>
+        </section>
+    </div>
+    <section id="contact">
+        <footer>
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Tamilnadu Shipyard Limited</p>
+            <p><strong>Phone:</strong> +91 98765 44343</p>
+            <p><strong>Email:</strong> tamilnaduship@gmail.com</p>
+        </footer>
+    </section>
+</body>
+</html>
